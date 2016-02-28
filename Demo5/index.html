@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="classRoom">
+    <head>
+        <meta charset="utf-8" />
+        <title>AngularJS Demo 1.0</title>
+        <link rel="stylesheet" type="text/css" href="js/libs/bootstrap/dist/css/bootstrap.min.css" />
+        <script type="text/javascript" src="js/libs/angular/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body ng-controller="ClassController as class">
+    <div class="container-fluid">
+            <h1>Class Management</h1>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    Filter by name: <input type="text" class="form-control" placeholder="Enter a name here..." ng-model="studentName" />
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-4">
+                    Filter name and country: <input type="text" class="form-control" placeholder="Search name and country here..." ng-model="searchText" />
+                </div>
+            </div>
+            <table class="table table-bordered table-hover" style="width: 50%">
+                <th style="width: 5%">ID</th>
+                <th style="width: 45%">Name</th>
+                <th style="width: 45%">Country</th>
+                <th style="width: 5%">Options</th>
+                <tr ng-repeat="student in class.students | filter:{ name: studentName } | filter:searchText | orderBy:'name'">
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.country }}</td>
+                    <td><form ng-submit="class.suspend(student)"><button type="submit" class="btn btn-danger">Suspend</button></form></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
