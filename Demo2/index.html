@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="classRoom">
+    <head>
+        <meta charset="utf-8" />
+        <title>AngularJS Demo 1.0</title>
+        <link rel="stylesheet" type="text/css" href="js/libs/bootstrap/dist/css/bootstrap.min.css" />
+        <script type="text/javascript" src="js/libs/angular/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body ng-init="students=['Diogo', 'Carlos', 'Andreas', 'Antonio', 'Marta', 'Panos', 'Maria', 'Joana', 'Monica', 'Alberto', 'Carmen']">
+    <div class="container-fluid">
+            <h1>Class Management</h1>
+            <table class="table table-bordered table-hover" style="width: 20%">
+                <tr ng-repeat="student in students">
+                    <td>{{ student }}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
