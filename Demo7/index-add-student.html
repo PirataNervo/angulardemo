@@ -1,0 +1,24 @@
+<!--  Add Student Form -->
+<div style="width: 30%; margin: 0 auto; text-align: center">
+    <a href="javascript:;" ng-click="displayForm=true">Add Member</a>
+    <div ng-show="displayForm">
+        <form name="addForm" ng-submit="class.add()">
+            <!--  Add Student Form -->
+            <h4>Add a new Student</h4>
+            <fieldset class="form-group">
+                <input ng-model="class.newMember.name" type="text" class="form-control" placeholder="Enter the student's name..." title="Name" />
+            </fieldset>
+            <fieldset class="form-group">
+             <input ng-model="class.newMember.country" type="text" class="form-control" placeholder="Enter the student's country..." title="Country" />
+            </fieldset>
+            <fieldset class="form-group">
+                <input type="submit" class="btn btn-primary pull-right" value="Add" />
+            </fieldset>
+
+            <blockquote>
+                <strong>{{class.newMember.name}}</strong><br />
+                {{class.newMember.country}}
+            </blockquote>
+        </form>
+    </div>
+</div>
