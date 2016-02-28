@@ -1,0 +1,12 @@
+<table class="table table-bordered table-hover" style="width: 50%">
+	<th style="width: 5%">ID</th>
+	<th style="width: 45%">Name</th>
+	<th style="width: 45%">Country</th>
+	<th style="width: 5%">Options</th>
+	<tr ng-repeat="student in class.students | filter:{ name: studentName } | filter:searchText | orderBy:'name'">
+		<td>{{ student.id }}</td>
+		<td>{{ student.name }}</td>
+		<td>{{ student.country }}</td>
+		<td><form ng-submit="class.suspend(student)"><button type="submit" class="btn btn-danger">Suspend</button></form></td>
+	</tr>
+</table>
