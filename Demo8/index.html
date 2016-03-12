@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="classRoom">
+    <head>
+        <meta charset="utf-8" />
+        <title>AngularJS Demo 1.0</title>
+        <link rel="stylesheet" type="text/css" href="js/libs/bootstrap/dist/css/bootstrap.min.css" />
+        <script type="text/javascript" src="js/libs/angular/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body ng-controller="ClassController as class">
+    <div class="container-fluid">
+            <h1 style="text-align: center">Class Management</h1>
+            <div class="row form-group" style="margin: 0 auto; text-align: center; width: 30%">
+                    Filter by name: <input type="text" class="form-control" placeholder="Enter a name here..." ng-model="studentName" />
+            </div>
+			<div class="row form-group" style="margin: 0 auto; text-align: center; width: 30%">
+                    Filter name and country: <input type="text" class="form-control" placeholder="Search name and country here..." ng-model="searchText" />
+            </div>
+			<br />
+            <add-student></add-student>
+            <list-students></list-students>
+        </div>
+    </body>
+</html>
