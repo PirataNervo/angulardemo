@@ -1,0 +1,18 @@
+<div class="container-fluid">
+        <h1 style="text-align: center">Class Management</h1>
+        <h2 style="text-align: center">Edit Student</h2>
+
+        <div style="width: 30%; margin: 0 auto; text-align: center">
+                <form name="update" ng-submit="edit()">
+                        <fieldset class="form-group">
+                                <input ng-model="student.name" type="text" class="form-control" placeholder="Enter the student's name..." title="Name" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                                <input ng-model="student.country" type="text" class="form-control" placeholder="Enter the student's country..." title="Country" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                                <input type="submit" class="btn btn-primary pull-right" value="Update" />
+                        </fieldset>
+                </form>
+        </div>
+</div>

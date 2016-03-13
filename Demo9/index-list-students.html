@@ -1,0 +1,15 @@
+<table class="table table-bordered table-hover" style="width: 50%; margin: 0 auto">
+	<th style="width: 5%">ID</th>
+	<th style="width: 35%">Name</th>
+	<th style="width: 35%">Country</th>
+	<th style="width: 25%">Options</th>
+	<tr ng-repeat="student in students | filter:{ name: studentName } | filter:searchText | orderBy:'name'">
+		<td>{{ student.id }}</td>
+		<td>{{ student.name }}</td>
+		<td>{{ student.country }}</td>
+		<td>
+			<form ng-submit="suspend(student)" style="display: inline"><button type="submit" class="btn btn-danger">Suspend</button></form>
+			<a href="#/edit/{{ student.id }}" class="btn btn-primary">Edit</button></form>
+		</td>
+	</tr>
+</table>
